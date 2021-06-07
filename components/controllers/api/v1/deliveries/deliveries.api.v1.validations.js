@@ -6,6 +6,9 @@ import Joi from '@hapi/joi'
 export default {
   'mainGet': Joi.object({
     "when": Joi.string().isoDate().optional(),
+    "dateFrom": Joi.string().isoDate().optional(),
+    "dateTo": Joi.string().isoDate().optional(),
+    "weight": Joi.number().optional(),
     "page": Joi.number().optional(),
     "limit": Joi.number().optional(),
   }),
